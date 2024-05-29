@@ -1,0 +1,46 @@
+---
+const PROJECTS = [
+
+    {
+        title: 'Project 1',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius molestias illum necessitatibus voluptatem magnam temporibus at, ipsum consectetur rerum nobis velit provident modi in nisi iusto nihil aspernatur quas.',
+        link: '#',
+        github: '#',
+        image: '/public/projects/239shots_so.png',
+        tag: ['HTML', 'CSS', 'REACT', 'NODE']
+    },
+    {
+        title: 'Project 2',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius molestias illum necessitatibus voluptatem magnam temporibus at, ipsum consectetur rerum nobis velit provident modi in nisi iusto nihil aspernatur quas.',
+        link: '#',
+        github: '#',
+        image: '/public/projects/239shots_so.png',
+        tag: ['HTML', 'CSS', 'REACT', 'NODE']
+
+    },
+    {
+        title: 'Project 3',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius molestias illum necessitatibus voluptatem magnam temporibus at, ipsum consectetur rerum nobis velit provident modi in nisi iusto nihil aspernatur quas.',
+        link: '#',
+        github: '#',
+        image:'/public/projects/239shots_so.png',
+        tag: ['HTML', 'CSS', 'REACT', 'NODE']
+    }, 
+]
+---
+{
+PROJECTS.map(({title, description, tag, image}) => ( 
+    <article>
+        <h3 class="text-2xl font-semibold text-fuchsia-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul>
+            {tag.map(tags =>(
+                <li>{tags}</li>
+            ))}
+        </ul>
+        <img 
+        class="rounded shadow-2xl shadow-white/20imgima"
+        src={image} alt=`captura de pantalla del proyecto ${title}`>
+    </article>
+))
+}
