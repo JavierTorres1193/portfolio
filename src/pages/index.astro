@@ -1,19 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
+import Badge from '../components/BadgeItem.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import GitHubItem from '../components/icons/GitHubItem.astro'
+import LinkedInItem from '../components/icons/LinkedInItem.astro'
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import BriefCase from '../components/icons/BriefCase.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
 ---
 
-<Layout title="Portfolio">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-
-			<h1 class="text-white text-5xl font-bold flex justify-center flex-row">Bienvenidos! Soy Javier Torres <div><Badge>Disponible para trabajar</Badge></div> </h1>
-			<h2>
-				1 año de experiencia. Desarrollador Full Stack de Misiones, Argentina. Especializado en Resolución de Problemas ;)
+<Layout title="Portfolio de Javier - Desarrollador Full Stack y Programador Web">
+	<main class="px-4 ">
+		<SectionContainer class="py-44  pb-24">
+			<img class="rounded-full w-12 h-12 mb-4" 
+			src= "../../public/1684184406794.jpeg"
+			alt="Javier Torres Photo"
+			/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Bienvenidos! Soy Javier Torres <a  href="https://linkedin.com/in/javier-torress-"
+				 target="_blank" 
+				 rel="noopener"
+				 class="flex justify-center items-center">
+				 <Badge>Disponible</Badge></a>
+			</h1> 
+			
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>1 año de experiencia.</span> <span class="opacity-80">Desarrollador Full Stack de <span class="text-teal-200">Misiones, Argentina.</span> Especializado en Resolución de Problemas ;)</span>
 			</h2>
-			<ul></ul>
-		</section>
+				<nav class=" flex gap-2 mt-8 flex-wraps">
+
+					<SocialPill href="https://github.com/JavierTorres1193">
+						<GitHubItem class="size-4 md:size-6" />
+						GitHub
+					  </SocialPill>
+			
+							
+							<SocialPill href="https://linkedin.com/in/javier-torress-">
+								<LinkedInItem class="size-4 md:size-6"/>
+								LinkedIn
+							  </SocialPill>
+									
+				</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+				<BriefCase class="size-8"/>
+				Expeciencia Laboral</h2>
+			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+				<Code class="size-8"/>
+				Projectos</h2>
+			<Projects/>
+		</SectionContainer>
+
 	</main>
 </Layout>
 

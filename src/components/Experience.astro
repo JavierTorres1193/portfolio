@@ -1,0 +1,40 @@
+---
+import { date } from "astro/zod"
+import ExperienceItem from "./icons/ExperienceItem.astro"
+
+
+const EXPERIENCE = [
+
+    {
+        date: 'Mayo 2024 - Actualidad',
+        title: 'Desarrollador Full Stack Relex',
+        description: 'Como desarrollador Full Stack me encargo de la Implementación del sistema de Digitalización de Archivos   y el mantenimiento de sistemas internos para la Dirección General de Catastro.'
+    },
+
+    {
+        date: 'Agosto 2023 - Actualidad',
+        title: 'Desarrollador Full Stack Silicon Misiones',
+        description: 'Como programador full stack en Silicon Misiones, participo en proyectos tanto de front end como de back end, aportando habilidades versátiles en desarrollo web. Realicé testing manual utilizando Selenium para garantizar la calidad del software. Mi contribución en ambos frentes ayudó a lograr una integración fluida entre la interfaz de usuario y la lógica del servidor.'
+    },
+
+    {
+        date: 'Abril 2023 - Octubre 2023',
+        title: 'Desarrollador WordPress SampiDesign',
+        description: 'Como desarrollador de WordPress me encargaba de la creación, diseño y mantenimiento de páginas hechas en wordpress'
+    },
+ 
+    
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3"> 
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
+
